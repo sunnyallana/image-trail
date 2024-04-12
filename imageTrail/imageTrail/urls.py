@@ -8,10 +8,10 @@ urlpatterns = [
     path('account/', include('account.urls')),
  ]
 
-'''
-We have added the static() helper function to serve media files with the Django development server 
-during development (that is when the DEBUG setting is set to True). 
-'''
+
+# We have added the static() helper function to serve media files with the Django development server 
+# during development (that is when the DEBUG setting is set to True). 
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

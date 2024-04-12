@@ -143,11 +143,10 @@ EMAIL_USE_TLS = True
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-'''
-LOGIN_REDIRECT_URL: Tells Django which URL to redirect the user to after a successful login if no next parameter is present in the request
-LOGIN_URL: The URL to redirect the user to log in (for example, views using the login_required decorator)
-LOGOUT_URL: The URL to redirect the user to log out
-'''
+# LOGIN_REDIRECT_URL: Tells Django which URL to redirect the user to after a successful login if no next parameter is present in the request
+# LOGIN_URL: The URL to redirect the user to log in (for example, views using the login_required decorator)
+# LOGOUT_URL: The URL to redirect the user to log out
+
 
 
 AUTHENTICATION_BACKENDS = [

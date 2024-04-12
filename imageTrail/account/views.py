@@ -13,18 +13,10 @@ def user_login(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            # If the submitted data is valid, the user gets authenticated against the database using the authenticate() method.
             user = authenticate(request,
                                 username=cd['username'],
                                 password=cd['password'])
             if user is not None:
-                
-                '''
-                If the user is successfully authenticated, the user status is checked by accessing the is_active 
-                attribute. This is an attribute of Django’s User model. If the user is not active, an HttpResponse 
-                is returned with a Disabled account message
-                '''
-
                 if user.is_active:
                     login(request, user)
                     return HttpResponse('Authenticated successfully')
